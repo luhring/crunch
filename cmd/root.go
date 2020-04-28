@@ -21,7 +21,7 @@ const flagNameInputFilePath = "input"
 
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&inputFilePath, flagNameInputFilePath, "i", "", "path to the input file")
-	rootCmd.AddCommand(sumsCmd)
+	rootCmd.AddCommand(sumCmd)
 	rootCmd.AddCommand(categorizeCmd)
 	rootCmd.AddCommand(filterCmd)
 }

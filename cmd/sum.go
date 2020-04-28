@@ -9,8 +9,8 @@ import (
 	"github.com/luhring/crunch/crunch"
 )
 
-var sumsCmd = &cobra.Command{
-	Use: "sums",
+var sumCmd = &cobra.Command{
+	Use: "sum",
 	Short: "Calculate sums of transaction values on a per-category basis",
 	Long: "",
 	Args: func(cmd *cobra.Command, args []string) error { return nil },
@@ -45,6 +45,6 @@ const flagNameCategory = "category-column"
 const flagNameAmount = "amount-column"
 
 func init() {
-	sumsCmd.Flags().StringVarP(&columnNameCategoryForSums, flagNameCategory, "c", "Category", "")
-	sumsCmd.Flags().StringVarP(&columnNameAmount, flagNameAmount, "a", "Amount", "")
+	sumCmd.Flags().StringVarP(&columnNameCategoryForSums, flagNameCategory, "c", "Category", "")
+	sumCmd.Flags().StringVarP(&columnNameAmount, flagNameAmount, "a", "Amount", "")
 }
